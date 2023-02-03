@@ -43,12 +43,12 @@ const renderCity = city => {
                 <span class="clima-max"
                   ><i class="fa-solid fa-arrow-up-long"></i>Max: ${convertirTemp(
                     city.main.temp_max
-                  )}</span
+                  )}°</span
                 >
                 <span class="clima-min"
                   ><i class="fa-solid fa-arrow-down-long"></i>Min: ${convertirTemp(
                     city.main.temp_min
-                  )}</span
+                  )}°</span
                 >
               </div>
               <span class="clima-humedad">${city.main.humidity}% Humedad</span>
