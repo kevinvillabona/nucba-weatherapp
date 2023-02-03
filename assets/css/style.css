@@ -1,0 +1,318 @@
+:root {
+  --main-bg-color: #0d1117;
+  --n-bg-color: linear-gradient(
+    0deg,
+    hsl(275deg 29% 40%) 0%,
+    hsl(262deg 36% 35%) 20%,
+    hsl(247deg 42% 33%) 40%,
+    hsl(237deg 51% 27%) 60%,
+    hsl(234deg 65% 18%) 80%,
+    hsl(235deg 76% 12%) 100%
+  );
+  --d-bg-color: linear-gradient(
+    180deg,
+    hsl(210deg 87% 60%) 0%,
+    hsl(207deg 87% 62%) 29%,
+    hsl(204deg 85% 64%) 43%,
+    hsl(201deg 84% 67%) 57%,
+    hsl(197deg 82% 69%) 71%,
+    hsl(192deg 80% 71%) 100%
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif 
+}
+
+body {
+  background-color: var(--main-bg-color);
+  height: 100%;
+  color: white;
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
+  font-size: 35px;
+  margin: 2%;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5%;
+}
+
+.container {
+  background-color: #1c273823;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.search .title {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  gap: 0;
+}
+form button {
+  background-color: var(--main-bg-color);
+  outline: none;
+  border: none;
+  color: rgba(250, 250, 250, 0.7);
+  padding: 8px 10px;
+  margin-right: 0;
+  border-radius: 10px 0 0 10px;
+}
+form input {
+  background-color: var(--main-bg-color);
+  outline: none;
+  border: none;
+  padding: 8px 5px;
+  color: rgba(250, 250, 250, 0.7);
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  max-width: 360px;
+}
+
+input::placeholder {
+  color: rgba(250, 250, 250, 0.2);
+}
+
+.card-clima {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+.d-bg {
+  background-image: var(--d-bg-color);
+}
+.n-bg {
+  background-image: var(--n-bg-color);
+}
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: rgba(250, 250, 250, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.close:hover {
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.clima-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+
+.info-title {
+  font-size: 35px;
+  font-weight: 300;
+  top: 25px;
+  position: absolute;
+  right: auto;
+}
+
+.info-subtitle {
+  font-size: 16px;
+  color: rgb(235, 235, 245, 0.6);
+}
+
+.info-temp {
+  margin-block-start: 10px;
+  display: flex;
+  align-items: baseline;
+}
+
+.temp {
+  font-size: 80px;
+  font-weight: 300;
+}
+
+.st {
+  background-color: rgba(217, 217, 217, 0.3);
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.clima-img {
+  animation: imgAnimation 15s linear infinite;
+}
+.clima-temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clima-max-min {
+  display: flex;
+  flex-direction: column;
+}
+
+.clima-max,
+.clima-min {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.clima-max i,
+.clima-min i {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.clima-humedad {
+  border-top: 1px solid rgba(250, 250, 250, 0.5);
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+  margin-block-start: 15px;
+  padding: 5px 30px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 36px;
+  color: rgb(116, 127, 140);
+}
+
+footer strong {
+  color: #ffffff;
+}
+
+.msg {
+  width: 100%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  form input {
+    padding: 20px 2px;
+  }
+
+  input::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .card-clima {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clima-info,
+  .info-temp {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+  }
+  .info-title {
+    font-size: 30px;
+    top: 35px;
+  }
+  .info-subtitle {
+    font-size: 20px;
+  }
+
+  .clima-img img {
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .info-title {
+    font-size: 30px;
+  }
+  .info-subtitle {
+    font-size: 15px;
+  }
+
+  .clima-img img {
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 335px) {
+  .info-title {
+    font-size: 20px;
+  }
+}
+
+.animate {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes imgAnimation {
+0%,
+100% {
+  transform: translateX(0);
+}
+
+10%,
+30%,
+50%,
+70% {
+  transform: translateX(-10px);
+}
+20%,
+40%,
+60% {
+  transform: translateX(10px);
+}
+
+80% {
+  transform: translateX(8px);
+}
+
+90% {
+  transform: translateX(-8px);
+}
+}

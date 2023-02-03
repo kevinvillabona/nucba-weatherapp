@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon-16x16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Clase 1.19 | Open Weather API</title>
+  </head>
+
+  <body>
+    <h1>Clase 1.19 | Open Weather API</h1>
+    <main>
+      <div class="container">
+        <div class="search">
+          <h2 class="title">El clima en</h2>
+          <form id="form">
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="text"
+              name="city"
+              autocomplete="off"
+              placeholder="Buscar Ciudad..."
+              class="search-input"
+            />
+          </form>
+        </div>
+        <p class="msg">Ingrese una ciudad...</p>
+        <section class="card-container">
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p><a href="https://github.com/kevinvillabona"><strong>Kevin</strong></a> | Bootcamp Full Stack <a href="https://www.nucba.io/codingbootcamp"><strong>NUCBA</strong></a> | Módulo 02 - JavaScript</p>
+    </footer>
+    <script src="./assets/js/request.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
