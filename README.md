@@ -1,4 +1,4 @@
-# [`NUCBA`](https://nucba.io/codingbootcamp) | [`Weather App`](nucba-weather-app.vercel.app) | Open Weather API - JavaScript
+# [`NUCBA`](https://nucba.io/codingbootcamp) | [`Weather App`](https://nucba-weather-app.vercel.app) | Open Weather API - JavaScript
 Solución al desafío correspondiente a la clase 1.19 del módulo 02 de JavaScript. El objetivo del desafío es consumir la API [`Open Weather`](https://openweathermap.org/) para crear una aplicación web que muestre el clima en la ciudad solicitada.
 
 ## Captura de pantalla
